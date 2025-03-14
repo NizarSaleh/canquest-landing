@@ -146,6 +146,7 @@ const styles = {
   },
   memberRow: {
     display: 'flex',
+    flexWrap: 'wrap',   // allows wrapping on small screens
     alignItems: 'center',
     padding: '1rem',
     marginBottom: '2rem',
@@ -154,23 +155,31 @@ const styles = {
     boxShadow: '0 0 10px rgba(0, 188, 212, 0.5)',
   },
   memberPhoto: {
-    width: '200px',
+    width: '100%',
+    maxWidth: '200px',  // ensures the image won't exceed 200px
     height: '200px',
     objectFit: 'cover',
     borderRadius: '8px',
     marginRight: '2rem',
+    marginBottom: '1rem', // in case it wraps
   },
   memberInfo: {
     flex: 1,
-  },
-  memberName: {
-    fontSize: '1.8rem',
-    marginBottom: '0.5rem',
-    color: '#00bcd4',
+    minWidth: '250px',  // ensures text area has some width
   },
   memberDescription: {
     fontSize: '1.1rem',
     lineHeight: '1.5',
+    // If your text is especially long or has no spaces, add:
+    overflowWrap: 'break-word',
+    wordWrap: 'break-word',
+    // Or `wordBreak: 'break-word'` in extreme cases
+  },
+  
+  memberName: {
+    fontSize: '1.8rem',
+    marginBottom: '0.5rem',
+    color: '#00bcd4',
   },
   // NEW styles for extra info sections
   infoContainer: {

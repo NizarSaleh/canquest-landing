@@ -41,18 +41,19 @@ function HomePage() {
         <p style={styles.bubbleText}>
           Check out our quick trailer to see CANQUEST in action:
         </p>
-        <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-          {/* Replace src with your actual trailer link */}
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="CANQUEST Trailer"
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
+        <div style={styles.videoContainer}>
+          <div style={styles.videoWrapper}>
+            <iframe
+              style={styles.responsiveIframe}
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="CANQUEST Trailer"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </section>
+
 
       {/* 4) Abstract bubble card */}
       <section style={styles.bubbleCard}>
@@ -101,6 +102,29 @@ function HomePage() {
 }
 
 const styles = {
+  // ... your existing styles ...
+
+  videoContainer: {
+    width: '100%',
+    maxWidth: '800px',     // optional: limit the max width of the video
+    margin: '0 auto',      // center horizontally
+  },
+  videoWrapper: {
+    position: 'relative',
+    width: '100%',
+    paddingBottom: '56.25%', // 16:9 ratio (100% / (16/9) = ~56.25%)
+    height: 0,
+    overflow: 'hidden',
+  },
+  responsiveIframe: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    border: 0,
+  },
+
   // Feature cards section
   featuresContainer: {
     background: '#1a1a1a',
@@ -133,6 +157,8 @@ const styles = {
   },
 
   // Bubble cards for trailer, abstract, storyboard, purpose
+
+  
   bubbleCard: {
     backgroundColor: '#222',
     margin: '2rem auto',
