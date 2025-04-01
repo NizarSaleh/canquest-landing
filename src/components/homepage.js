@@ -88,7 +88,7 @@ function HomePage() {
           <strong>Target Audience:</strong>
         </p>
         <ul style={styles.bulletList}>
-          <li>Racing enthusiasts seeking an innovative twist.</li>
+          <li>Cybersecurity enthusiasts seeking an innovative twist.</li>
           <li>Students and professionals wanting to hone cybersecurity skills.</li>
           <li>Adrenaline junkies with a love for hacking and cars.</li>
         </ul>
