@@ -1,4 +1,4 @@
-/* index.css (or wherever you define global styles) */
+/* index.css */
 
 /* 1) Local Bangers */
 @font-face {
@@ -18,16 +18,25 @@
   font-display: swap;
 }
 
-/* Default body font -> local Ubuntu */
+/* Global styles without background */
 html, body {
   margin: 0;
   padding: 0;
   font-family: 'UbuntuLocal', sans-serif; 
-  background: #f7f7f7;
+  /* Removed global background */
   color: #333;
 }
 
-/* Title class -> local Bangers */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Title class using local Bangers */
 .myComicHeader {
   font-family: 'Bangers', cursive;
   color: #fff;
@@ -35,7 +44,8 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 3px;
   display: inline-block;
-  /* transform: skewX(-5deg); // only if you still want the skew effect */
+  /* Uncomment if you want a slight skew */
+  /* transform: skewX(-5deg); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;

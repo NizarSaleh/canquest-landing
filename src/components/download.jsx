@@ -1,5 +1,5 @@
-// components/download.jsx
 import React from 'react';
+import downloadBackground from '../assets/background.jpg';
 
 function DownloadPage() {
   return (
@@ -7,7 +7,6 @@ function DownloadPage() {
       <h1 className="myComicHeader" style={styles.heading}>
         Download CANQUEST
       </h1>
-
       <section style={styles.comicPanel}>
         <h2 className="myComicHeader" style={styles.subHeading}>
           ZIP File
@@ -19,18 +18,18 @@ function DownloadPage() {
           Download CANQUEST v2 (ZIP)
         </a>
       </section>
-
       <section style={styles.comicPanel}>
         <h2 className="myComicHeader" style={styles.subHeading}>
           Game Download (Windows)
         </h2>
         <p style={styles.text}>
-          CANQUEST is currently built for Windows 10 or later.<br/>
-          <strong>How to Run:</strong> Extract the ZIP, then double-click <em>CANQUEST.exe</em>.<br/>
+          CANQUEST is built for Windows 10 or later.
+          <br />
+          <strong>How to Run:</strong> Extract the ZIP, then double-click <em>CANQUEST.exe</em>.
+          <br />
           <strong>Minimal Specs:</strong> 8GB RAM, Intel i5 or equivalent, 2GB free disk space.
         </p>
       </section>
-
       <section style={styles.comicPanel}>
         <h2 className="myComicHeader" style={styles.subHeading}>
           Server / Docker Image (Linux)
@@ -39,27 +38,29 @@ function DownloadPage() {
           Run the CANQUEST server on a Linux environment or via Docker.
         </p>
         <p style={styles.text}>
-          <strong>1) Docker (Recommended)</strong><br />
-          <code>docker pull canquest/server:latest</code><br />
+          <strong>1) Docker (Recommended)</strong>
+          <br />
+          <code>docker pull canquest/server:latest</code>
+          <br />
           <code>docker run -it -p 8080:8080 canquest/server</code>
         </p>
         <p style={styles.text}>
-          <strong>2) Linux VM</strong><br />
-          You can set up an Ubuntu VM and install Docker or run the server natively. Check out{' '}
+          <strong>2) Linux VM</strong>
+          <br />
+          Set up an Ubuntu VM, install Docker, or run the server natively. See{' '}
           <a href="https://ubuntu.com/tutorials" target="_blank" rel="noreferrer">
             Ubuntu's official tutorials
           </a>.
         </p>
       </section>
-
       <section style={styles.comicPanel}>
         <h2 className="myComicHeader" style={styles.subHeading}>
           Troubleshooting / Known Issues
         </h2>
         <ul style={styles.list}>
-          <li><strong>Game Won’t Launch:</strong> Make sure your GPU drivers are up to date.</li>
-          <li><strong>Server Unreachable:</strong> Check Docker is running; confirm port 8080 is open.</li>
-          <li><strong>VM Connectivity:</strong> Ensure your VM network adapter allows inbound traffic.</li>
+          <li><strong>Game Won’t Launch:</strong> Ensure your GPU drivers are up to date.</li>
+          <li><strong>Server Unreachable:</strong> Confirm Docker is running; check port 8080.</li>
+          <li><strong>VM Connectivity:</strong> Verify your VM network adapter allows inbound traffic.</li>
         </ul>
       </section>
     </div>
@@ -68,9 +69,13 @@ function DownloadPage() {
 
 const styles = {
   container: {
-    maxWidth: '1000px',
-    margin: '1rem auto',
+    minHeight: '100vh',
+    width: '100%',
     padding: '1rem',
+    background: `url(${downloadBackground}) center center / cover no-repeat`,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   heading: {
     fontSize: '3rem',
@@ -78,13 +83,14 @@ const styles = {
     color: '#ff0000',
     marginBottom: '1rem',
   },
-  // Update comicPanel background to yellow:
   comicPanel: {
     background: '#ffec00',
     border: '6px solid #000',
     padding: '1rem',
     margin: '1rem 0',
     boxShadow: '8px 8px 0 #000',
+    width: '100%',
+    maxWidth: '900px',
   },
   subHeading: {
     fontSize: '2rem',
@@ -94,7 +100,7 @@ const styles = {
   text: {
     fontSize: '1.2rem',
     color: '#333',
-    fontFamily: "'Ubuntu', sans-serif",
+    fontFamily: "'UbuntuLocal', sans-serif",
   },
   downloadLink: {
     display: 'inline-block',
@@ -106,13 +112,13 @@ const styles = {
     textDecoration: 'none',
     fontSize: '1.2rem',
     marginTop: '1rem',
-    fontFamily: "'Ubuntu', sans-serif",
+    fontFamily: "'UbuntuLocal', sans-serif",
   },
   list: {
     fontSize: '1.2rem',
     color: '#333',
     marginLeft: '2rem',
-    fontFamily: "'Ubuntu', sans-serif",
+    fontFamily: "'UbuntuLocal', sans-serif",
   },
 };
 

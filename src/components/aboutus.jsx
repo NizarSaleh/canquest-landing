@@ -1,3 +1,4 @@
+// components/aboutus.jsx
 import React from 'react';
 import groupPhoto from '../assets/group.jpg';
 import kevinPhoto from '../assets/kevin.jpg';
@@ -9,12 +10,14 @@ import nizarPhoto from '../assets/nizar.jpg';
 function AboutUs() {
   return (
     <section style={styles.container}>
-      {/* 1) "Meet Our Team" WHITE box */}
+      {/* Intro Panel (White) */}
       <div style={styles.introPanel}>
-        <h2 className="myComicHeader" style={styles.introHeading}>Meet Our Team</h2>
+        <h2 className="myComicHeader" style={styles.introHeading}>
+          Meet Our Team
+        </h2>
       </div>
 
-      {/* 2) Group Photo WHITE box */}
+      {/* Group Photo Panel (White) */}
       <div style={styles.groupPhotoPanel}>
         <img src={groupPhoto} alt="Our Team" style={styles.groupPhoto} />
         <p style={styles.text}>
@@ -22,7 +25,7 @@ function AboutUs() {
         </p>
       </div>
 
-      {/* 3) Individual Team Members (WHITE boxes) */}
+      {/* Individual Team Member Panels (White) */}
       <div style={styles.memberPanel}>
         <img src={kevinPhoto} alt="Kevin Mitchel (Client)" style={styles.memberPhoto} />
         <h3 className="myComicHeader" style={styles.subHeading}>Kevin Mitchel (Client)</h3>
@@ -63,7 +66,7 @@ function AboutUs() {
         </p>
       </div>
 
-      {/* 4) Additional Info (YELLOW boxes) */}
+      {/* Additional Info Panels (White) */}
       <div style={styles.infoPanel}>
         <h3 className="myComicHeader" style={styles.subHeading}>ETAS Collaboration</h3>
         <p style={styles.text}>
@@ -75,8 +78,7 @@ function AboutUs() {
       <div style={styles.infoPanel}>
         <h3 className="myComicHeader" style={styles.subHeading}>Senior Design Faculty</h3>
         <p style={styles.text}>
-          Special thanks to the University of Michigan-Dearborn CECS Senior Design faculty 
-          for their mentorship and support throughout this project.
+          Special thanks to the University of Michigan-Dearborn CECS Senior Design faculty for their mentorship and support.
         </p>
       </div>
 
@@ -87,7 +89,7 @@ function AboutUs() {
           <strong>GitHub:</strong> github.com/CANQUEST
         </p>
         <p style={styles.text}>
-          We are open source! Feel free to contribute or explore the repo for more details on how CANQUEST is built.
+          We are open source! Feel free to contribute or explore the repo for more details.
         </p>
       </div>
     </section>
@@ -95,17 +97,12 @@ function AboutUs() {
 }
 
 const styles = {
-  /* The overall container is yellow to match your site’s background. */
   container: {
     margin: '1rem auto',
     maxWidth: '1200px',
-    background: '#ffec00',
-    border: '6px solid #000',
-    boxShadow: '8px 8px 0 #000',
+    background: '#fff',
     padding: '1rem',
   },
-
-  /* 1) Intro Panel (Meet Our Team) is white. */
   introPanel: {
     background: '#fff',
     border: '6px solid #000',
@@ -119,8 +116,6 @@ const styles = {
     margin: 0,
     color: '#ff0000',
   },
-
-  /* 2) Group Photo Panel is white. */
   groupPhotoPanel: {
     background: '#fff',
     border: '6px solid #000',
@@ -134,8 +129,6 @@ const styles = {
     display: 'block',
     margin: '0 auto 1rem auto',
   },
-
-  /* 3) Member Panels (white). */
   memberPanel: {
     background: '#fff',
     border: '6px solid #000',
@@ -161,14 +154,12 @@ const styles = {
   memberDescription: {
     fontSize: '1.2rem',
     color: '#333',
-    marginTop: '1cm', // 1 cm below the subHeading
+    marginTop: '1cm',
     fontFamily: "'UbuntuLocal', sans-serif",
     clear: 'both',
   },
-
-  /* 4) Info Panels (yellow). */
   infoPanel: {
-    background: '#ffec00',
+    background: '#fff',
     border: '6px solid #000',
     padding: '1rem',
     marginBottom: '1rem',

@@ -58,7 +58,11 @@ function HomePage() {
           Abstract
         </h2>
         <p style={styles.panelText}>
-        CANQuest is a gamified learning platform that helps ethical hackers—from beginners to experts—develop automotive penetration testing skills. Built with Unreal Engine, the game offers Capture-the-Flag (CTF) challenges that simulate real-world vehicle vulnerabilities using a virtual CAN network and a custom UDS server. Players interact with simulated Electronic Control Units (ECUs) to discover and exploit weaknesses, collecting flags along the way. As an open-source project, CANQuest also lets professionals design custom CTFs, fostering community knowledge sharing and technical skill advancement.        </p>
+        CANQuest is a gamified learning platform that helps ethical hackers—from beginners to experts—develop automotive penetration testing skills. 
+        Built with Unreal Engine, the game offers Capture-the-Flag (CTF) challenges that simulate real-world vehicle vulnerabilities using a virtual CAN network and a custom UDS server. 
+        Players interact with simulated Electronic Control Units (ECUs) to discover and exploit weaknesses, collecting flags along the way. As an open-source project, 
+        CANQuest also lets professionals design custom CTFs, fostering community knowledge sharing and technical skill advancement.
+        </p>
       </section>
 
       <section style={styles.panelSection}>
@@ -66,7 +70,9 @@ function HomePage() {
           Storyboard
         </h2>
         <p style={styles.panelText}>
-        In a dystopian future, an all-controlling AI—conceived by a misguided tech visionary—has seized power over autonomous vehicles in Deartropolis, enforcing surveillance and curtailing freedom. Now, awakened players join the White Hat to hack into these vehicles using secret diagnostic backdoors, dismantle the corrupt system, and restore autonomy to the city.
+        In a dystopian future, an all-controlling AI—conceived by a misguided tech visionary—has seized power over autonomous vehicles in Deartropolis, 
+        enforcing surveillance and curtailing freedom. Now, awakened players join the White Hat to hack into these vehicles using secret diagnostic backdoors, 
+        dismantle the corrupt system, and restore autonomy to the city.
         </p>
       </section>
 
@@ -82,7 +88,7 @@ function HomePage() {
           <strong>Target Audience:</strong>
         </p>
         <ul style={styles.bulletList}>
-          <li>Cybersecurity enthusiasts seeking an innovative twist.</li>
+          <li>Racing enthusiasts seeking an innovative twist.</li>
           <li>Students and professionals wanting to hone cybersecurity skills.</li>
           <li>Adrenaline junkies with a love for hacking and cars.</li>
         </ul>

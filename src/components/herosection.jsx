@@ -1,7 +1,7 @@
 // components/herosection.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import cityLightningGif from '../assets/rain.gif';
+import backgroundhome from '../assets/rain.gif'; // adjust path if needed
 
 function HeroSection() {
   const navigate = useNavigate();
@@ -35,24 +35,25 @@ function HeroSection() {
 }
 
 const styles = {
-  heroContainer: {
-    position: 'relative',
-    width: '100%',
-    height: '400px',
-    background: `url(${cityLightningGif}) center/cover no-repeat`,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: '1rem',
-  },
-  // Use the same yellow as header (#ffec00) here:
-  panelBorder: {
-    backgroundColor: '#ffec00',
-    border: '6px solid #000',
-    padding: '2rem',
-    boxShadow: '8px 8px 0 #000',
-    textAlign: 'center',
-  },
+    heroContainer: {
+      position: 'relative',
+      width: '100%',
+      height: '400px',
+      background: `url(${backgroundhome}) center/cover no-repeat`, // new background
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginBottom: '1rem',
+    },
+    panelBorder: {
+      backgroundColor: '#ffec00',
+      border: '6px solid #000',
+      padding: '2rem',
+      boxShadow: '8px 8px 0 #000',
+      textAlign: 'center',
+    },
+    // 
+
   heroTitle: {
     margin: '0 0 1rem 0',
     color: '#000',
