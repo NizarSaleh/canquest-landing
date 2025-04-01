@@ -1,3 +1,4 @@
+// components/header.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -5,9 +6,15 @@ function Header() {
   return (
     <header style={styles.header}>
       <nav style={styles.nav}>
-        <Link to="/" style={styles.navLink}>Home</Link>
-        <Link to="/about" style={styles.navLink}>About Us</Link>
-        <Link to="/download" style={styles.navLink}>Download</Link>
+        <Link to="/" className="myComicHeader" style={styles.navLink}>
+          Home
+        </Link>
+        <Link to="/about" className="myComicHeader" style={styles.navLink}>
+          About Us
+        </Link>
+        <Link to="/download" className="myComicHeader" style={styles.navLink}>
+          Download
+        </Link>
       </nav>
     </header>
   );
@@ -15,17 +22,22 @@ function Header() {
 
 const styles = {
   header: {
-    background: '#222',
+    background: '#ffec00',
     padding: '1rem 2rem',
+    borderBottom: '8px solid #000',
   },
   nav: {
     display: 'flex',
-    gap: '1rem',
+    gap: '2rem',
+    justifyContent: 'center',
   },
+  // Optionally you can remove font styling here since the class handles it.
   navLink: {
-    color: '#00bcd4',
-    textDecoration: 'none',
-    fontSize: '1.2rem',
+    // You may adjust fontSize here if you want smaller nav titles.
+    fontSize: '1.8rem',
+    color: '#000',
+    textTransform: 'uppercase',
+    letterSpacing: '1px',
   },
 };
 

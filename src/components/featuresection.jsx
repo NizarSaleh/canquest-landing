@@ -1,4 +1,7 @@
+// components/featureSection.jsx
 import React from 'react';
+
+const accentColor = '#E95420';
 
 function FeatureSection() {
   const features = [
@@ -20,7 +23,7 @@ function FeatureSection() {
   ];
 
   return (
-    <section id="features" style={styles.featuresContainer}>
+    <section style={styles.featuresContainer}>
       {features.map((feature, index) => (
         <div key={index} style={styles.featureCard}>
           <div style={styles.icon}>{feature.icon}</div>
@@ -34,7 +37,7 @@ function FeatureSection() {
 
 const styles = {
   featuresContainer: {
-    background: '#1a1a1a',
+    background: '#2e3436',
     padding: '4rem 2rem',
     display: 'flex',
     justifyContent: 'space-around',
@@ -45,10 +48,10 @@ const styles = {
   featureCard: {
     width: '300px',
     textAlign: 'center',
-    background: 'linear-gradient(135deg, #222, #333)',
+    background: 'linear-gradient(135deg, #3c3c3c, #4a4a4a)',
     padding: '1.5rem',
-    borderRadius: '8px',
-    boxShadow: '0 0 10px rgba(0, 188, 212, 0.5)',
+    borderRadius: '4px',
+    boxShadow: '0 0 8px rgba(233, 84, 32, 0.5)',
   },
   icon: {
     fontSize: '2.5rem',
@@ -57,7 +60,7 @@ const styles = {
   featureTitle: {
     fontSize: '1.5rem',
     marginBottom: '1rem',
-    color: '#00bcd4',
+    color: accentColor,
   },
   featureDescription: {
     fontSize: '1rem',

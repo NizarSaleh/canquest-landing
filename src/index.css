@@ -1,8 +1,42 @@
-/* index.css or App.css */
+/* index.css (or wherever you define global styles) */
+
+/* 1) Local Bangers */
+@font-face {
+  font-family: 'Bangers';
+  src: url('./fonts/Bangers-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2) Local Ubuntu */
+@font-face {
+  font-family: 'UbuntuLocal';
+  src: url('./fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Default body font -> local Ubuntu */
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #111; /* if you want a dark background globally */
-  color: #eee;           /* matching your dark theme text color */
-  font-family: sans-serif;
+  font-family: 'UbuntuLocal', sans-serif; 
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* Title class -> local Bangers */
+.myComicHeader {
+  font-family: 'Bangers', cursive;
+  color: #fff;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: inline-block;
+  /* transform: skewX(-5deg); // only if you still want the skew effect */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }

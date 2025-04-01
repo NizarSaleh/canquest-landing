@@ -1,19 +1,27 @@
+// components/footer.jsx
 import React from 'react';
 
 function Footer() {
   return (
     <footer style={styles.footer}>
-      <p>© {new Date().getFullYear()} CANQUEST. All rights reserved.</p>
+      <p className="myComicHeader" style={styles.footerText}>
+        © {new Date().getFullYear()} CANQUEST. All rights reserved.
+      </p>
     </footer>
   );
 }
 
 const styles = {
   footer: {
-    background: '#222',
-    padding: '1rem 2rem',
+    background: '#ffec00',
+    padding: '1rem',
+    borderTop: '8px solid #000',
     textAlign: 'center',
-    color: '#aaa',
+    marginTop: 'auto',
+  },
+  footerText: {
+    fontSize: '1.4rem',
+    color: '#000',
   },
 };
 
