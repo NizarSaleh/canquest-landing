@@ -38,11 +38,13 @@ function DownloadPage() {
           Run the CANQUEST server on a Linux environment or via Docker.
         </p>
         <p style={styles.text}>
-          <strong>1) Docker (Recommended)</strong>
+          <strong>1) Docker Image</strong>
           <br />
-          <code>docker pull canquest/server:latest</code>
+          <code>docker pull canquest0/my-can-handler-image:latest</code>
           <br />
-          <code>docker run -it -p 8080:8080 canquest/server</code>
+          <code>sudo docker run -it --rm --network=host --name my-can-handler-container canquest0/my-can-handler-image:latest</code>
+          <br />
+          
         </p>
         <p style={styles.text}>
           <strong>2) Linux VM</strong>
