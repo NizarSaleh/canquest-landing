@@ -27,7 +27,7 @@ function DownloadPage() {
           <br />
           <strong>How to Run:</strong> Extract the ZIP, then double-click <em>CANQUEST.exe</em>.
           <br />
-          <strong>Minimal Specs:</strong> 8GB RAM, Intel i5 or equivalent, 2GB free disk space.
+          <strong>Minimal Specs:</strong> 8GB RAM, Intel i5 or equivalent, 8GB free disk space.
         </p>
       </section>
       <section style={styles.comicPanel}>
